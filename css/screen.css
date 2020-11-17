@@ -58,7 +58,9 @@ html {
     -moz-osx-font-smoothing: grayscale;
     background-color: white;
 }
-
+body{
+    overflow-y: hidden;
+}
 *,
 *:before,
 *:after {
@@ -84,6 +86,24 @@ html {
     text-shadow: none;
 }
 
+::-webkit-scrollbar {
+    width: var(--global-baseline);
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: none
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-navIcon);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-navIcon-hover);;
+  }
 /*------------------------------------*\
 #Elements
 \*------------------------------------*/
@@ -320,6 +340,8 @@ input::placeholder {
     grid-gap: 0px;
 
     min-height: 100vh;
+
+    
 }
 
 .c-app__logo{
@@ -338,7 +360,8 @@ input::placeholder {
 
 .c-app__sidebar{
     background-color: #43425D;
-
+    overflow-y: scroll;
+    height: calc(100vh - 70px);
 }
 
 .c-app__topbar{
@@ -347,10 +370,20 @@ input::placeholder {
 }
 
 .c-app__main{
+    height: 100%;
     background-color: #F0F0F7;
+    overflow-y: scroll;
+    height: calc(100vh - 70px);
+}
+
+.c-app__main-container{
+    max-width: calc(var(--global-baseline) * 234);
+    padding: var(--global-whitespace-xl);
+    margin: 0 auto;
 }
 
 .c-main-nav ul{
+    
     list-style: none;
     padding: 0;
     padding-top: var(--global-whitespace-xss);
