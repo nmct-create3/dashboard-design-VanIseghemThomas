@@ -17,6 +17,9 @@
     --color-neutral-light: LIGHTSLATEGRAY;
     --color-neutral: SLATEGRAY;
     --color-neutral-dark: DARKSLATEGRAY;
+    
+    --color-navIcon: #A5A4BF;
+    --color-navIcon-hover: #A3A0FB;
 
     /*Whitespace*/
     --global-baseline: 5px;
@@ -32,7 +35,7 @@
     /* border radius */
 
     /* transitions */
-    --transition-alpha: .1s;
+    --transition-alpha: .3s;
 }
 
 /*------------------------------------*\
@@ -309,6 +312,84 @@ input::placeholder {
     ---
     Website main logo
 */
+
+.c-app{
+    display: grid;
+    grid-template-columns: 260px auto;
+    grid-template-rows: min-content auto;
+    grid-gap: 0px;
+
+    min-height: 100vh;
+}
+
+.c-app__logo{
+    background-color: #3B3B53;
+    color: white;
+    
+}   
+
+.c-app__logo h1{
+    font-size: calc(var(--global-baseline) * 3);
+    line-height: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: var(--global-whitespace-lg);
+}
+
+.c-app__sidebar{
+    background-color: #43425D;
+
+}
+
+.c-app__topbar{
+    background-color: white;
+
+}
+
+.c-app__main{
+    background-color: #F0F0F7;
+}
+
+.c-main-nav ul{
+    list-style: none;
+    padding: 0;
+    padding-top: var(--global-whitespace-xss);
+    margin: 0;
+}
+
+.c-main-nav__item{
+    margin-bottom: var(--global-whitespace-xss);
+    transition: var(--transition-alpha);
+}
+
+.c-main-nav__item:hover{
+    background-color: #3B3B53;
+    transition: var(--transition-alpha);
+    border-left: var(--global-baseline) solid var(--color-navIcon-hover);
+}
+.c-main-nav__item--selected{
+    background-color: #3B3B53;
+    border-left: var(--global-baseline) solid var(--color-navIcon-hover);
+}
+
+.c-main-nav__item a{
+    color: white;
+    display: flex;
+    text-decoration: none;
+    padding: var(--global-whitespace-md);
+    font-size: calc(var(--global-baseline) * 3);
+    line-height: calc(var(--global-baseline) * 4);
+}
+
+.c-nav__symbol{
+    margin-right: var(--global-whitespace-xs);
+}
+
+.c-nav__symbol svg{
+    fill: var(--color-navIcon);
+    height: 16px;
+    width: 16px;
+}
 
 /*------------------------------------*\
 #UTILITIES
