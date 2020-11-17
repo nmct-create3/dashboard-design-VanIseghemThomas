@@ -2,6 +2,9 @@
 #FONTS
 \*------------------------------------*/
 
+/*Source Sans Pro*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap');
+
 /*------------------------------------*\
 #Variables
 \*------------------------------------*/
@@ -14,6 +17,15 @@
     --color-neutral-light: LIGHTSLATEGRAY;
     --color-neutral: SLATEGRAY;
     --color-neutral-dark: DARKSLATEGRAY;
+
+    /*Whitespace*/
+    --global-baseline: 5px;
+    --global-whitespace-xss: var(--global-baseline);
+    --global-whitespace-xs: calc(var(--global-baseline) * 2);
+    --global-whitespace-sm: calc(var(--global-baseline) * 3);
+    --global-whitespace-md: calc(var(--global-baseline) * 4);
+    --global-whitespace-lg: calc(var(--global-baseline) * 5);
+    --global-whitespace-xl: calc(var(--global-baseline) * 6);
 
     /* Shadows */
 
@@ -36,7 +48,7 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     color: var(--color-neutral-dark);
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
@@ -98,20 +110,22 @@ h3 {
 
 h1 {
     font-size: 36px;
-    line-height: 48px;
-    margin: 0 0 24px;
+    line-height: calc(var(--global-baseline)*10);
+    margin: 0 0 var(--global-whitespace-md);
 }
 
 h2 {
     font-size: 32px;
-    line-height: 40px;
-    margin: 0 0 24px;
+    line-height: calc(var(--global-baseline)*8);
+    margin: 0 0 var(--global-whitespace-lg);
+}
 }
 
 h3 {
     font-size: 26px;
-    line-height: 32px;
-    margin: 0 0 24px;
+    line-height: calc(var(--global-baseline)*6);
+    margin: 0 0 var(--global-whitespace-md);
+}
 }
 
 h4,
@@ -119,8 +133,9 @@ h5,
 h6 {
     font-size: 16px;
     font-weight: 600;
-    line-height: 24px;
-    margin: 0 0 24px;
+    line-height: calc(var(--global-baseline)*5);
+    margin: 0 0 var(--global-whitespace-md);
+}
 }
 
 p,
@@ -130,7 +145,7 @@ dl,
 table,
 address,
 figure {
-    margin: 0 0 24px;
+    margin: 0 0 var(--global-whitespace-md);
 }
 
 ul,
