@@ -8,6 +8,9 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/screen.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
+        <script src="./script/app.js"></script>
     </head>
     <body>
         <div class="c-app">
@@ -17,7 +20,43 @@
                 </h1>
             </div>
             <div class="c-app__topbar">
-
+                <div class="c-top-content">
+                    <div class="c-top-search">
+                        <div class="c-top-icon c-top-icon--search">
+                            <svg class="icon icon-search"><use xlink:href="./icons/symbol-defs.svg#icon-search"></use></svg>
+                        </div>
+                        <input class="c-top-search_input" type="text" placeholder="Search Transactions, Invoices or help">
+                    </div>
+                    <div class="c-top-profile">
+                        <div class="c-profile_notifications">
+                            <div class="c-top-icon">
+                                <svg class="icon icon-help"><use xlink:href="./icons/symbol-defs.svg#icon-help"></use></svg>
+                            </div>
+                            <div class="c-top-icon">
+                                <svg class="icon icon-chat_round"><use xlink:href="./icons/symbol-defs.svg#icon-chat_round"></use></svg>
+                            </div>
+                            <div class="c-top-icon">
+                                <svg class="icon icon-bell"><use xlink:href="./icons/symbol-defs.svg#icon-bell"></use></svg>
+                            </div>
+                        </div>
+                        
+                        <div class="c-profile_divider">
+                            
+                        </div>
+                        <div class="c-profile_info">
+                            <div class="c-profile_info-name">John Doe</div>
+                            <div class="c-profile_info-dropdown">
+                                <div class="c-top-icon c-top-icon--dropdown">
+                                    <svg class="icon icon-arrow"><use xlink:href="./icons/symbol-defs.svg#icon-arrow"></use></svg>
+                                </div>
+                            </div>
+                            <div class="c-profile_info-pic">
+                                <img src="./img/avatar.jpg" alt="Profile avatar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
             <div class="c-app__sidebar">
                 <nav class="c-main-nav">
@@ -118,6 +157,61 @@
                     <h2>
                         Overview
                     </h2>
+                    <div class="c-dashboard">
+                        
+                        <div class="c-dashboard__item c-dashboard__item--1">
+                            <div class="c-stats_top-bar">
+                                <h4 class="c-dashboard__item-title">Visitors per day</h4>
+                                <div class="c-form-field">
+                                    <span class="c-custom-select">
+                                        <select class="c-custom-select__input c-input js-select-day" class="" name="select-day" id="select-day">
+                                            <option value="maandag">Maandag</option>
+                                            <option value="dinsdag">Dinsdag</option>
+                                            <option value="woensdag">Woensdag</option>
+                                            <option value="donderdag">Donderdag</option>
+                                            <option value="vrijdag">Vrijdag</option>
+                                            <option value="zaterdag">Zaterdag</option>
+                                            <option value="zondag">Zondag</option>
+                                        </select>
+                                        <svg class="c-custom-select__symbol" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M7,10l5,5,5-5Z"/>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="c-graph">
+                                <canvas class="js-graph" width="3" height="1"></canvas>
+                            </div>
+                            
+                        </div>
+                        <div class="c-dashboard__item c-dashboard__item--2">
+                            grid item2
+                        </div>
+                        <div class="c-dashboard__item c-dashboard__item--3">
+                            grid item3
+                        </div>
+                        <div class="c-dashboard__item c-dashboard__item--4">
+                            grid item4
+                        </div>
+                        <div class="c-dashboard__item c-dashboard__item--5">
+                            grid item5
+                        </div>
+                        <div class="c-dashboard__item c-dashboard__item--6">
+                            grid item6
+                        </div>
+                        <div class="c-dashboard__item c-dashboard__item--7">
+                            grid item7
+                        </div>
+                        <div class="c-dashboard__item c-dashboard__item--8">
+                            grid item8
+                        </div>
+                        <div class="c-dashboard__item c-dashboard__item--9">
+                            grid item9
+                        </div>
+                    </div>
+                    
+
+                    
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed arcu finibus, gravida nibh at, mattis nibh. Integer id vulputate nulla. Phasellus laoreet massa sed augue sollicitudin facilisis. Quisque efficitur urna non elit viverra viverra. In non arcu venenatis, molestie ante nec, pulvinar risus. Integer neque arcu, accumsan a est gravida, efficitur tristique ipsum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla vel risus nec lorem consequat luctus vitae non est. Vivamus ac ullamcorper quam, non aliquam ipsum. In quis nulla fringilla, venenatis dui sed, tristique lorem. Nam ac tellus vel lectus iaculis malesuada. In porttitor enim egestas, pellentesque enim et, malesuada ipsum. Fusce tellus felis, pulvinar a suscipit in, tincidunt id est. Fusce nisi ligula, tincidunt id magna et, consectetur mollis dui.
                     </p>
